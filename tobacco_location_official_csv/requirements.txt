@@ -1,0 +1,9 @@
+streamlit>=1.37,<2
+streamlit-folium>=0.23,<1
+folium>=0.17,<1
+requests>=2.31,<3
+pandas>=2.0,<3
+numpy>=1.26,<3
+scipy>=1.11,<2
+pyproj>=3.6,<4
+pytest>=8,<10
