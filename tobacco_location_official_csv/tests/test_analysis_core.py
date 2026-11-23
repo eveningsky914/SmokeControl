@@ -1,10 +1,8 @@
 import io
-import math
 import zipfile
-from pathlib import Path
 import numpy as np
 from pyproj import Transformer
-from analysis_core import SpatialDataset, normalize_dataset, analyze, grid_candidates, haversine_m, read_table_bytes
+from analysis_core import SpatialDataset, normalize_dataset, analyze, haversine_m
 
 
 def test_live_status_and_invalid_coordinates():
@@ -35,7 +33,7 @@ def test_zip_many_csv():
     assert set(frame['name'])=={'학교A','학교B'}
 
 
-def test_spatial_index_nearest_counts_and_grid():
+def test_spatial_index_nearest_and_retail_distance_check():
     csv=('사업장명,위도,경도\n'
          '첫째,37.5665,126.978\n'
          '둘째,37.5666,126.978\n'
@@ -46,20 +44,17 @@ def test_spatial_index_nearest_counts_and_grid():
     assert len(near)==2
     assert min(dist)==0
     report=analyze(37.5665,126.978,{'tobacco':idx})
-    assert report['count_500']==2
-    assert report['suspect']
-    assert report['used_weight']==40
-    assert report['components']['판매점 간 거리']==0
-    grid=grid_candidates(37.5665,126.978,{'tobacco':idx},steps=3)
-    assert len(grid)==9
-    assert bool(grid['거리미달의심'].iloc[-1])
+    site, distance = report['nearest']['tobacco']
+    assert site['name'] == '첫째'
+    assert distance == 0
+    assert report['retail_check'] == '허가 불가'
+    assert analyze(37.5675,126.978,{'tobacco':idx})['retail_check'] == '허가 가능'
 
 
-def test_uncovered_region_never_gets_high_score():
+def test_uncovered_region_requires_coverage_check():
     frame,_=normalize_dataset('사업장명,위도,경도\nA,37.5665,126.978\n'.encode(),'tobacco')
     s=analyze(35.1796,129.0756,{'tobacco':SpatialDataset.from_frame(frame)})
-    assert s['score'] is None and s['coverage_unknown']
-    assert '점수 보류' in s['level']
+    assert s['retail_check'] == '지역 데이터 범위 확인 필요'
 
 
 def test_interior_nearest_not_only_radius():
@@ -79,3 +74,10 @@ def test_status_unknown_not_auto_closed():
     frame,meta=normalize_dataset('사업장명,영업상태명,위도,경도\nA,01,37.5,127\n'.encode(),'tobacco')
     assert len(frame)==1
     assert '판독 불가' in meta['상태 처리']
+
+
+def test_closed_retailers_are_excluded_even_when_no_store_is_open():
+    raw = '사업장명,영업상태명,위도,경도\nA,폐업,37.5,127\n'.encode()
+    frame, _ = normalize_dataset(raw, 'tobacco')
+    assert frame.empty
+    assert analyze(37.5, 127, {'tobacco': frame})['nearest']['tobacco'] is None

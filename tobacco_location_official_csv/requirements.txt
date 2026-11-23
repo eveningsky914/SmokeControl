@@ -6,4 +6,6 @@ pandas>=2.0,<3
 numpy>=1.26,<3
 scipy>=1.11,<2
 pyproj>=3.6,<4
+pyshp>=2.3,<3
+shapely>=2,<3
 pytest>=8,<10

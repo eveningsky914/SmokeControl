@@ -1,0 +1,2 @@
+data/기타_담배소매업.csv filter=lfs diff=lfs merge=lfs -text
+tobacco_location_official_csv/data/education_zones.zip filter=lfs diff=lfs merge=lfs -text

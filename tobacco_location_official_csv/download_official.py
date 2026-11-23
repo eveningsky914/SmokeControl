@@ -8,11 +8,11 @@ from pathlib import Path
 import subprocess
 import sys
 import requests
-from data_io import write_source, validate_raw
+from data_io import find_source, write_source, validate_raw
 
 ROOT=Path(__file__).resolve().parent
-IDS={"tobacco":"15045104","schools":"15021148","zones":"15012891"}
-DESC={"tobacco":"담배소매업 인허가","schools":"전국 학교 위치","zones":"전국 어린이보호구역"}
+IDS={"tobacco":"15045104","schools":"15021148"}
+DESC={"tobacco":"담배소매업 인허가","schools":"전국 학교 위치"}
 
 
 def find_valid_file(folder:Path,kind:str):
@@ -110,7 +110,10 @@ def main():
     if any(s!='성공' for s in summary.values()):
         print('모든 자료를 받지 못했습니다. README의 공식 다운로드 페이지를 이용해 누락한 CSV를 앱에 올리세요.')
     else:
-        print('3종 CSV 연결 완료. python -m streamlit run app.py 로 분석 앱을 실행하세요.')
+        print('담배소매점·학교 CSV 연결 완료. python -m streamlit run app.py 로 분석 앱을 실행하세요.')
+    if not find_source(ROOT/'data','kindergartens'):
+        print('유치원 자료는 유치원알리미(https://e-childschoolinfo.moe.go.kr/openData.do)에서')
+        print('일반현황 CSV를 내려받아 앱에 올리거나 data/kindergartens.csv로 저장하세요.')
     return 0 if all(s=='성공' for s in summary.values()) else 1
 
 

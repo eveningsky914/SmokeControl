@@ -8,7 +8,7 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
-echo [2/2] Attempting to download and validate 3 public CSV datasets...
+echo [2/2] Attempting to download and validate retailer and school CSV datasets...
 python download_official.py
 if errorlevel 1 (
     echo Some data were not downloaded. Please open README and download missing files manually.
