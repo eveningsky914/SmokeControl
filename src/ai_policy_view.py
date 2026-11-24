@@ -65,7 +65,7 @@ def render_ai_policy_recommendations(region_profile: Mapping, *, key: str = "ai_
         return
 
     _, result = st.session_state[result_key]
-    if result["source"] == "fallback":
-        st.info(result["notice"])
+    if notice := result.get("notice"):
+        st.info(notice)
     for policy in result["recommendations"]:
         _render_card(policy)

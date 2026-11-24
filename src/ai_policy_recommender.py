@@ -134,7 +134,7 @@ def _card(policy: dict, fact: dict | None) -> dict:
     }
 
 
-def _fallback(catalog: dict, notice: str) -> dict:
+def _fallback(catalog: dict, notice: str | None = None) -> dict:
     return {"source": "fallback", "notice": notice, "recommendations": [_card(catalog[key], None) for key in FALLBACK_IDS]}
 
 
@@ -148,7 +148,7 @@ def recommend_policies(region_profile: Mapping, *, api_key: str | None = None, m
         api_key, configured_model = _openai_settings()
         model = model or configured_model
     if not isinstance(api_key, str) or not api_key.strip():
-        return _fallback(catalog, "Streamlit Secrets의 OPENAI_API_KEY가 없어 기본 정책 후보를 표시합니다.")
+        return _fallback(catalog)
 
     model = model or DEFAULT_MODEL
     facts = {fact["id"]: fact for fact in profile["facts"]}
