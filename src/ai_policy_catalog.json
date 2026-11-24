@@ -1,0 +1,150 @@
+[
+  {
+    "id": "clinic_followup",
+    "title": "보건소 금연클리닉 후속 상담 강화",
+    "target": "금연을 희망하거나 금연을 시도한 지역 주민",
+    "action": "보건소 금연클리닉에서 첫 상담과 후속 상담을 함께 예약하고, 중도 이탈자에게 재참여 경로를 안내한다.",
+    "general_reason": "지역 주민이 상시 이용할 수 있는 금연 상담 경로를 마련한다.",
+    "connections": {
+      "smoking_rate": "지역의 공식 사용률을 상담 수요와 제공 인력을 검토하는 자료로 활용한다.",
+      "composition": "인구구성 비교 결과를 참고해 상담 안내 대상과 채널을 검토한다.",
+      "sex": "표본의 성별 집계 결과를 참고해 성별에 따른 상담 접근성을 확인한다.",
+      "age": "연령대별 집계 결과를 참고해 상담 시간과 안내 채널을 검토한다.",
+      "stress": "초기 상담에서 스트레스 대처를 다룰 필요가 있는지 참여자에게 확인한다.",
+      "drinking": "초기 상담에서 음주 상황의 금연 실천계획을 논의할 수 있도록 준비한다."
+    },
+    "considerations": ["기존 보건소 상담 인력과 후속 예약 가능 시간을 확인한다.", "등록 수, 후속 상담 완료율과 추적조사 응답률을 따로 기록한다."],
+    "case": {
+      "institution": "서울특별시 용산구보건소",
+      "title": "용산구 제8기 지역보건의료계획 시행결과",
+      "url": "https://opengov.seoul.go.kr/og/com/download.php?dname=%EC%A0%9C8%EA%B8%B0+1%EC%B0%A8%EB%85%84%EB%8F%84%282023%EB%85%84%29+%EC%8B%9C%ED%96%89%EA%B2%B0%EA%B3%BC+%EB%B0%8F+2%EC%B0%A8%EB%85%84%EB%8F%84%282024%EB%85%84%29+%EC%8B%9C%ED%96%89%EA%B3%84%ED%9A%8D_%EC%9A%A9%EC%82%B0%EA%B5%AC.pdf&dtype=basic&nid=30405057&rid=F0000103326723&uri=%2Ffiles%2Fdcdata%2F100018%2F20240223%2FF0000103326723.pdf",
+      "target": "용산구 지역주민",
+      "description": "보건소 금연클리닉 운영 실적을 지역보건의료계획 시행결과에 공개했다.",
+      "outcomes": ["용산구의 2023년 사업 보고치에서 금연클리닉 등록 인원은 688명, 6개월 금연 성공률은 32.7%였다."]
+    }
+  },
+  {
+    "id": "telephone_counseling",
+    "title": "금연상담전화 연결과 비대면 후속 상담",
+    "target": "방문 상담에 시간이나 이동 제약이 있는 금연 희망자",
+    "action": "온·오프라인 안내에 국가금연상담전화 이용 경로를 넣고 희망자에게 후속 상담 예약 방법을 안내한다.",
+    "general_reason": "방문 상담과 함께 이용할 수 있는 비대면 금연 상담 경로를 제공한다.",
+    "connections": {
+      "employment": "경제활동 관련 집계 결과를 참고해 업무 시간 외 상담 수요를 확인한다.",
+      "occupation": "직업군별 결과를 상담 시간대와 접촉 방법을 정하는 참고자료로 활용한다.",
+      "age": "연령대별 집계 결과를 참고해 전화와 문자 안내의 이용 편의를 확인한다.",
+      "stress": "상담에서 스트레스 대처와 금연 실천계획을 함께 안내할 수 있도록 준비한다.",
+      "health_access": "지역 의료 인력 현황과 함께 비대면 상담 안내 경로를 점검한다."
+    },
+    "considerations": ["희망자가 선택한 채널과 시간대로만 연락한다.", "상담 안내 건수와 실제 상담 연결 건수를 구분해 기록한다."],
+    "case": {
+      "institution": "금연길라잡이 안내 기준 인하대학교 산학협력단",
+      "title": "금연길라잡이 금연상담전화 사업 안내",
+      "url": "https://www.nosmokeguide.go.kr/helpness/counsel",
+      "target": "개별 금연 상담을 원하는 이용자",
+      "description": "예약 전화상담과 문자·채팅 등 비대면 지원을 안내한다.",
+      "outcomes": []
+    }
+  },
+  {
+    "id": "medical_referral",
+    "title": "병·의원 금연치료 연계",
+    "target": "의료진을 통한 금연치료 상담을 희망하는 지역 주민",
+    "action": "보건소 상담 시 참여 의료기관 찾는 방법과 건강보험공단 금연치료지원사업 신청 경로를 안내한다.",
+    "general_reason": "의료진의 상담과 진료가 필요한 주민에게 기존 금연치료 지원사업의 이용 경로를 제공한다.",
+    "connections": {
+      "smoking_rate": "지역의 공식 사용률을 참고해 금연치료 의뢰 경로와 예상 상담 수요를 점검한다.",
+      "health_access": "지역 의료 인력 지표를 참고해 참여 의료기관의 실제 위치와 예약 가능 여부를 대조한다.",
+      "vulnerability": "지역의 수급 관련 집계 결과를 참고해 지원금과 본인부담 기준을 알기 쉽게 안내한다."
+    },
+    "considerations": ["참여 기관과 지원 요건의 최신 정보를 확인한다.", "진료와 약물치료 결정은 의료진 상담으로 연결한다."],
+    "case": {
+      "institution": "국민건강보험공단",
+      "title": "국민건강보험공단 금연치료지원사업 안내",
+      "url": "https://www.nhis.or.kr/renewal_popup/poster/20260824_poster_longdesc_1.html",
+      "target": "금연치료를 희망하는 건강보험 가입자 및 의료급여 수급자",
+      "description": "참여 의료기관의 진료·상담과 금연치료 약제 및 보조제 비용 지원을 안내한다.",
+      "outcomes": []
+    }
+  },
+  {
+    "id": "workplace_outreach",
+    "title": "사업장 방문 금연지원",
+    "target": "금연 상담을 희망하는 지역 사업장 근로자",
+    "action": "지역금연지원센터와 협의해 참여 희망 사업장에 방문 상담과 후속 상담을 연결한다.",
+    "general_reason": null,
+    "connections": {
+      "occupation": "선택 지역의 직업군별 가중 추정치를 방문 상담 수요를 조사할 업종을 검토하는 데 활용한다.",
+      "employment": "경제활동 관련 집계 결과를 참고해 사업장 협력 수요와 상담 시간대를 파악한다.",
+      "manufacturing": "제조업 종사자 현황을 사업장 협력처를 찾는 자료로 활용한다."
+    },
+    "considerations": ["노동자 참여 의사와 근무 시간대를 먼저 확인한다.", "개인 상담 결과에 대한 사업주의 접근을 제한하고 참여는 자발적으로 운영한다."],
+    "case": {
+      "institution": "부산광역시 동래구보건소",
+      "title": "동래구 이동 금연클리닉",
+      "url": "https://www.dongnae.go.kr/index.dongnae?menuCd=DOM_000000803019000000",
+      "target": "금연을 희망하는 단체와 사업장",
+      "description": "상담사가 신청한 사업장 등 생활터를 방문해 금연 상담을 제공한다.",
+      "outcomes": []
+    }
+  },
+  {
+    "id": "young_adult_campaign",
+    "title": "청년층 금연 캠페인과 상담 연결",
+    "target": "지역의 청년 성인과 금연에 관심 있는 대학생",
+    "action": "대학·청년기관과 공동으로 금연 상담 이용 경로를 알리고 자발적 상담 신청으로 연결한다.",
+    "general_reason": null,
+    "connections": {
+      "young_adult": "선택 지역의 청년 성인 연령대 가중 추정치를 참고해 청년 대상 안내 채널의 확대 여부를 검토한다."
+    },
+    "considerations": ["대학 밖 청년에게도 도달할 수 있도록 청년기관과 협력한다.", "캠페인 도달 수와 실제 상담 연결을 따로 확인한다."],
+    "case": {
+      "institution": "경주시 보건소 주민건강지원센터",
+      "title": "경주시 찾아가는 학교·대학교 흡연예방 교육",
+      "url": "https://gyeongju.go.kr/health/page.do?mnu_uid=3103",
+      "target": "초·중·고등학생과 대학생",
+      "description": "대학교를 포함한 교육기관과 연계하여 흡연예방 교육을 운영한다. 대학 협력 경로의 참고 사례다.",
+      "outcomes": []
+    }
+  },
+  {
+    "id": "smoke_free_places",
+    "title": "금연구역 안내와 운영 점검",
+    "target": "공중이용시설 이용자와 시설 관리자",
+    "action": "관할 금연구역 목록을 대조하고 시설별 금연표지, 안내 방법과 민원 대응 절차를 점검한다.",
+    "general_reason": "시설 관리자와 이용자가 금연구역과 이용 수칙을 쉽게 확인할 수 있도록 한다.",
+    "connections": {
+      "environment": "지역 공원 등 환경 지표를 참고해 공식 지정 목록과 현장 안내 상태를 대조한다.",
+      "retail_density": "소매점 밀도는 지역 환경의 참고 지표로 사용하고, 실제 점검 장소는 공식 지정 목록과 현장 조사로 정한다."
+    },
+    "considerations": ["지정·점검 범위와 권한을 관할 부서에 확인한다.", "표지 점검 결과와 민원 건수를 기록하고 실제 노출 지표는 별도로 조사한다."],
+    "case": {
+      "institution": "전라남도 고흥군보건소",
+      "title": "고흥군 공중이용시설 금연구역 지도점검",
+      "url": "https://www.goheung.go.kr/health/contentsView.do?pageId=health39",
+      "target": "관내 공중이용시설",
+      "description": "공중이용시설의 금연구역 지도점검과 홍보물 배부를 안내한다.",
+      "outcomes": []
+    }
+  },
+  {
+    "id": "accessible_outreach",
+    "title": "경제적 취약계층 방문 금연상담",
+    "target": "기초생활보장 수급자 등 기존 금연지원서비스 이용이 어려운 주민 중 상담 희망자",
+    "action": "지역금연지원센터 및 복지기관과 협력해 대상자에게 자발적 참여가 가능한 방문 상담을 안내한다.",
+    "general_reason": null,
+    "connections": {
+      "vulnerability": "수급 관련 집계 결과를 참고해 복지기관 연계와 상담 접근성을 점검한다.",
+      "lower_income": "낮은 가구소득 구간의 지역 표본 집계를 참고해 이용 비용과 이동 제약을 현장에서 확인한다."
+    },
+    "considerations": ["개인 수급·소득 정보 없이 일반 안내를 먼저 제공한다.", "복지 서비스 참여와 금연상담 참여를 연계 조건으로 두지 않는다."],
+    "case": {
+      "institution": "한국건강증진개발원 국가금연지원센터 및 지역금연지원센터",
+      "title": "금연두드림 찾아가는 금연지원서비스",
+      "url": "https://nosmk.khepi.or.kr/nsk/user/extra/ntcc/68/services/nosmokeService/jsp/LayOutPage.do",
+      "target": "기존 서비스를 이용하기 어려운 여러 대상 중 수급권자와 차상위계층 등",
+      "description": "지역금연지원센터가 현장에 찾아가 대면·전화 상담 등 금연 프로그램을 운영한다.",
+      "outcomes": []
+    }
+  }
+]
